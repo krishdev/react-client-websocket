@@ -168,7 +168,7 @@ body, html {
 
 @media (max-width: 480px) {
   .left-column {
-    padding: 5px;
+    padding: 1.5em 5px 5px;
   }
 
   .right-column {
