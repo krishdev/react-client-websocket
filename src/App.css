@@ -1,3 +1,15 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  height: 100%;
+    width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #f5f5f5;
+  overflow-x: hidden;
+}
+
 .chat-container {
   display: flex;
   flex-direction: row;
@@ -12,6 +24,7 @@
   padding: 20px;
   background-color: #fff;
   border-right: 1px solid #ccc;
+  box-sizing: border-box;
 }
 
 .right-column {
@@ -21,6 +34,7 @@
   justify-content: center;
   align-items: center;
   padding: 20px;
+  box-sizing: border-box;
 }
 
 .chat-box {
@@ -40,9 +54,9 @@
   padding: 10px 20px;
   margin: 5px 0;
   border-radius: 20px;
-  max-width: 45%;
+  max-width: 1200px;
   word-wrap: break-word;
-  white-space: pre-wrap;
+  white-space: pre;
 }
 
 .chat-message.me {
@@ -55,6 +69,7 @@
   align-self: flex-start;
 }
 
+.chat-story-container, 
 .chat-input-container {
   display: flex;
   width: 100%;
@@ -93,15 +108,8 @@
 .dropdown {
   padding: 10px;
   margin-bottom: 10px;
-  border: 0; /*1px solid #ccc;*/
+  border: 0;
   border-radius: 5px;
-}
-
-.chat-story-container {
-  display: flex;
-  width: 100%;
-  max-width: 1200px;
-  margin-top: 10px;
 }
 
 .story-form {
@@ -116,4 +124,67 @@
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+  .chat-container {
+    flex-direction: column;
+  }
+
+  .left-column {
+    width: 100%;
+    padding: 10px;
+    border-right: none;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .right-column {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .chat-box {
+    height: 60vh;
+    margin-bottom: 10px;
+  }
+
+  .chat-input-container {
+    flex-direction: column;
+    max-width: 100%;
+  }
+
+  .chat-input {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .left-column {
+    padding: 5px;
+  }
+
+  .right-column {
+    padding: 5px;
+  }
+
+  .chat-box {
+    height: 50vh;
+  }
+
+  .chat-input-container {
+    padding: 5px;
+  }
+
+  .dropdown {
+    padding: 5px;
+  }
+
+  .story-input {
+    padding: 5px;
+  }
+
+  .chat-send-button {
+    padding: 5px 10px;
+  }
 }
