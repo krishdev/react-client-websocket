@@ -133,7 +133,8 @@ function App() {
         )}
         <div className="chat-input-container">
           <input
-            type="text"
+            type="text" 
+            placeholder="Type your message..."
             value={input}
             onChange={handleInputChange}
             onKeyPress={handleKeyPress}

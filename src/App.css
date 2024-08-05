@@ -1,12 +1,11 @@
 body, html {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   height: 100%;
-    width: 100%;
   display: flex;
   flex-direction: column;
-  background-color: #f5f5f5;
+  background-color: #f0f2f5;
   overflow-x: hidden;
 }
 
@@ -20,10 +19,11 @@ body, html {
 .left-column {
   display: flex;
   flex-direction: column;
-  width: 200px;
+  width: 250px;
   padding: 20px;
   background-color: #fff;
   border-right: 1px solid #ccc;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
 }
 
@@ -33,14 +33,14 @@ body, html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 20px;
   box-sizing: border-box;
+  padding: 20px;
 }
 
 .chat-box {
   width: 100%;
-  max-width: 1200px;
-  height: 80vh;
+  max-width: 1000px;
+  height: 70vh;
   /* background-color: #fff; */
   border-radius: 10px;
   /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
@@ -54,13 +54,15 @@ body, html {
   padding: 10px 20px;
   margin: 5px 0;
   border-radius: 20px;
-  max-width: 1200px;
+  max-width: 80%;
   word-wrap: break-word;
-  white-space: pre;
+  font-size: 14px;
+  white-space:  pre-wrap;
 }
 
 .chat-message.me {
-  background-color: #d1e7dd;
+  background-color: #007bff;
+  color: #fff;
   align-self: flex-end;
 }
 
@@ -73,17 +75,18 @@ body, html {
 .chat-input-container {
   display: flex;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1000px;
   margin-top: 10px;
 }
 
 .chat-input {
   flex: 1;
-  padding: 10px;
+  padding: 15px;
   border: 1px solid #ccc;
   border-radius: 20px;
   outline: none;
   margin-right: 10px;
+  font-size: 14px;
 }
 
 .chat-send-button {
@@ -94,6 +97,7 @@ body, html {
   border-radius: 20px;
   cursor: pointer;
   transition: background-color 0.3s;
+  font-size: 14px;
 }
 
 .chat-send-button:disabled {
@@ -108,24 +112,27 @@ body, html {
 .dropdown {
   padding: 10px;
   margin-bottom: 10px;
-  border: 0;
+  border: 1px solid #ccc;
   border-radius: 5px;
+  font-size: 14px;
 }
 
 .story-form {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  margin-bottom: 10px;
   width: 100%;
+  margin-bottom: 10px;
 }
 
 .story-input {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  font-size: 14px;
 }
 
+/* Responsive Styles */
 @media (max-width: 768px) {
   .chat-container {
     flex-direction: column;
@@ -161,7 +168,7 @@ body, html {
 
 @media (max-width: 480px) {
   .left-column {
-    padding: 1em 5px 5px;
+    padding: 5px;
   }
 
   .right-column {
@@ -178,7 +185,6 @@ body, html {
 
   .dropdown {
     padding: 5px;
-    border: 1px solid #ccc;
   }
 
   .story-input {
