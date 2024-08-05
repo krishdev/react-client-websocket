@@ -161,7 +161,7 @@ body, html {
 
 @media (max-width: 480px) {
   .left-column {
-    padding: 5px;
+    padding: 1em 5px 5px;
   }
 
   .right-column {
@@ -178,6 +178,7 @@ body, html {
 
   .dropdown {
     padding: 5px;
+    border: 1px solid #ccc;
   }
 
   .story-input {
