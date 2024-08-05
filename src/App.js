@@ -36,7 +36,7 @@ function App() {
       client.send(message);
       setMessages((prevMessages) => [
         ...prevMessages,
-        { sender: 'me', text: `${input}\n Story Name: ${storyName}\n Story Description: ${storyDescription}` }
+        { sender: 'me', text: `${input}\n ${storyName ? ('Story Name: ' + storyName + '\n Story Description: ' + storyDescription) : ''}` }
       ]);
 
       setInput('');
